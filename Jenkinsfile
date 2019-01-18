@@ -1,5 +1,5 @@
 @Library('jenkinsLib') _
-import org.ssense.jb.Hello
+import org.ssense.jb.Hello.*
 
 node {
 
