@@ -1,4 +1,4 @@
-@Library('jenkinsLib') import org.ssense.jb.*
+@Library('jenkinsLib') import org.ssense.jb.Hello.*
 
 node {
 
