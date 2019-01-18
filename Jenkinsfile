@@ -4,7 +4,7 @@ import org.ssense.jb.Hello
 node {
 
   stage('Init') {
-    def hello = new Hello()
+    def hello = new Hello(this)
     hello.sayHello("Override")
   }
 
