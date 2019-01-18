@@ -1,9 +1,10 @@
-@Library('jenkinsLib') import org.ssense.jb.Hello.*
+@Library('jenkinsLib') _
+import org.ssense.jb.Hello
 
 node {
 
   stage('Init') {
-    sayHello("Override")
+    Hello.sayHello("Override")
   }
 
   // def git_url = "ssh://git@gitlab/grdf-dev/sofitsso.git"
