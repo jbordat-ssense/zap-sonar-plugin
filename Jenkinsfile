@@ -4,7 +4,8 @@ import org.ssense.jb.Hello
 node {
 
   stage('Init') {
-    Hello.sayHello("Override")
+    def hello = new Hello(this)
+    hello.sayHello("Override")
   }
 
   // def git_url = "ssh://git@gitlab/grdf-dev/sofitsso.git"
