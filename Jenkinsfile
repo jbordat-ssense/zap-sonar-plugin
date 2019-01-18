@@ -16,7 +16,7 @@ node {
   def pipelineMvn
 
   stage('Init') {
-    git branch: 'master', url: "ssh://git@gitlab/grdf-dev/jenkinslib.git"
+    git branch: 'master', url: "ssh://git@github.com:jbordat-ssense/jenkins-lib.git"
     pipelineLibs = load('jenkinsLib.groovy')
   }
 
