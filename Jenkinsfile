@@ -3,10 +3,19 @@
 node {
 
   stage('Init') {
-    // Show git informations
-    // Set display name
-    initialize()
+    hello()
+    config.debug = true
+    hello(config)
+    config.message = "toto"
+    hello(config)
+    // // Show git informations
+    // // Set display name
+    // initialize()
   }
+
+  // stage('Security') {
+  //
+  // }
 
 
   //
