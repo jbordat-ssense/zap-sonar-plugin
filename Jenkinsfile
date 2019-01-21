@@ -1,7 +1,5 @@
 @Library('jenkinsLib') _
 
-import
-
 node {
 
   stage('Init') {
