@@ -3,6 +3,13 @@
 node {
 
   stage('Init') {
+    def comment = null
+
+    if (comment == null)
+      comment = "TESTTTTT"
+
+    hello(comment)
+
     hello()
     hello("Override")
   }
