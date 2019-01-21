@@ -3,8 +3,7 @@
 node {
 
   stage('Init') {
-    config = []
-    hello(config)
+    hello(debug: false)
     config.debug = true
     hello(config)
     config.message = "toto"
