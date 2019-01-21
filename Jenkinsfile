@@ -1,28 +1,16 @@
 @Library('jenkinsLib') _
 
+import
+
 node {
 
   stage('Init') {
-    def comment = null
-
-    if (comment == null)
-      comment = "TESTTTTT"
-
-    hello(comment)
-
-    hello()
-    hello("Override")
+    // Show git informations
+    // Set display name
+    initialize()
   }
 
-  // def git_url = "ssh://git@gitlab/grdf-dev/sofitsso.git"
-  // def pipelineLibs
-  // def pipelineJdk
-  // def pipelineMvn
-  //
-  // stage('Init') {
-  //   git branch: 'master', url: "ssh://git@github.com:jbordat-ssense/jenkins-lib.git"
-  //   pipelineLibs = load('jenkinsLib.groovy')
-  // }
+
   //
   // stage('Repository') {
   //
