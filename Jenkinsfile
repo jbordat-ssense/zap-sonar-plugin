@@ -8,10 +8,10 @@ node {
     // hello([debug:true])
     // hello([message:"HAHAHAHAHA"])
 
-    
+
     // Show git informations
     // Set display name
-    initialize()
+    initialize([allow_override: true])
   }
 
   // stage('Security') {
