@@ -3,16 +3,10 @@
 node {
 
   stage('Init') {
-    // hello(debug: false)
-    // config.debug = true
-    // hello(config)
-    // config.message = "toto"
-    // hello(config)
-    //
 
-    def config = [:]
-    testFunction(config)
-    testFunction()
+    hello()
+    hello([debug:true])
+    hello([message:"HAHAHAHAHA"])
 
     //
     // // Show git informations
@@ -46,13 +40,4 @@ node {
   //   // pipelineLibs.sonarAnalysis()
   // }
 
-}
-
-def testFunction(Map config = [:]) {
-  config.debug = config.debug ?: false
-
-  // if (!config.containsKey("debug")) {
-  //   config.debug = false
-  // }
-  echo String.valueOf(config.debug)
 }
