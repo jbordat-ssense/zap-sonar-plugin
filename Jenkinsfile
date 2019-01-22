@@ -11,12 +11,12 @@ node {
 
     // Show git informations
     // Set display name
-    initialize([allow_override: true])
+    initialize()
   }
 
-  // stage('Security') {
-  //
-  // }
+  stage('Security') {
+    qaAnalysis([debug:true])
+  }
 
 
   //
