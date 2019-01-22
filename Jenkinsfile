@@ -52,5 +52,5 @@ def testFunction(Map config) {
   // if (!config.containsKey("debug")) {
   //   config.debug = false
   // }
-  echo config.debug
+  echo String.valueOf(config.debug)
 }
