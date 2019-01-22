@@ -4,14 +4,14 @@ node {
 
   stage('Init') {
 
-    hello()
-    hello([debug:true])
-    hello([message:"HAHAHAHAHA"])
+    // hello()
+    // hello([debug:true])
+    // hello([message:"HAHAHAHAHA"])
 
-    //
-    // // Show git informations
-    // // Set display name
-    // initialize()
+    
+    // Show git informations
+    // Set display name
+    initialize()
   }
 
   // stage('Security') {
