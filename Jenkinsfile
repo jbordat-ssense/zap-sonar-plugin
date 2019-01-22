@@ -4,11 +4,11 @@ node {
    def whatThe2 = someFunc2('textToFunc2')
 }
 
-def someFunc(String text){
+def someFunc(Map text){
     echo text
     text
 }
-def someFunc2(String text2){
+def someFunc2(Map text2){
     echo text2
     text2
 }
