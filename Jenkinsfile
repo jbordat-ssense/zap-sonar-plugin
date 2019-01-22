@@ -11,8 +11,8 @@ node {
     //
 
     def config = [:]
-
     testFunction(config)
+    testFunction()
 
     //
     // // Show git informations
@@ -48,7 +48,7 @@ node {
 
 }
 
-def testFunction(Map config = []) {
+def testFunction(Map config = [:]) {
   config.debug = config.debug ?: false
 
   // if (!config.containsKey("debug")) {
