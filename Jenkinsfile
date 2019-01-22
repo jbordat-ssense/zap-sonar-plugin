@@ -44,12 +44,13 @@ node {
   //   // pipelineLibs.sonarAnalysis()
   // }
 
-  def testFunction(Map config) {
-    config.debug = config.debug ?: false
+}
+@NonCPS
+def testFunction(Map config) {
+  config.debug = config.debug ?: false
 
-    // if (!config.containsKey("debug")) {
-    //   config.debug = false
-    // }
-    echo config
-  }
+  // if (!config.containsKey("debug")) {
+  //   config.debug = false
+  // }
+  echo config
 }
