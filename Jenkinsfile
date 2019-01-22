@@ -1,8 +1,8 @@
-@Library('jenkinsLib') _
+// @Library('jenkinsLib') _
 
 node {
 
-  stage('Init') {
+  // stage('Init') {
     // hello(debug: false)
     // config.debug = true
     // hello(config)
@@ -16,7 +16,7 @@ node {
     // // Show git informations
     // // Set display name
     // initialize()
-  }
+  // }
 
   // stage('Security') {
   //
