@@ -10,9 +10,9 @@ node {
     // hello(config)
     //
 
-    testFunction(['debug':true])
-    testFunction([])
-    testFunction()
+    def config = [:]
+
+    testFunction(config)
 
     //
     // // Show git informations
