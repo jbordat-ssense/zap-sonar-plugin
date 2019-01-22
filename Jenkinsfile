@@ -10,7 +10,7 @@ node {
     // hello(config)
     //
 
-    testFunction()
+    testFunction
 
     //
     // // Show git informations
