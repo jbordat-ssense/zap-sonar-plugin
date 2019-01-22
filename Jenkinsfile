@@ -1,17 +1,8 @@
 // @Library('jenkinsLib') _
 
-def testFunction(Map config) {
-  config.debug = config.debug ?: false
-
-  // if (!config.containsKey("debug")) {
-  //   config.debug = false
-  // }
-  echo config
-}
-
 node {
 
-  stage('Init') {
+  stage 'Init'
     // hello(debug: false)
     // config.debug = true
     // hello(config)
@@ -19,13 +10,12 @@ node {
     // hello(config)
     //
 
-    testFunction()
+  def test = testFunction()
 
     //
     // // Show git informations
     // // Set display name
     // initialize()
-  }
 
   // stage('Security') {
   //
@@ -53,4 +43,13 @@ node {
   //   // pipelineLibs.sonarAnalysis()
   // }
 
+}
+
+def testFunction(Map config) {
+  config.debug = config.debug ?: false
+
+  // if (!config.containsKey("debug")) {
+  //   config.debug = false
+  // }
+  echo config
 }
