@@ -1,55 +1,14 @@
-// @Library('jenkinsLib') _
-
 node {
-
-  stage 'Init'
-    // hello(debug: false)
-    // config.debug = true
-    // hello(config)
-    // config.message = "toto"
-    // hello(config)
-    //
-
-  def test = testFunction()
-
-    //
-    // // Show git informations
-    // // Set display name
-    // initialize()
-
-  // stage('Security') {
-  //
-  // }
-
-
-  //
-  // stage('Repository') {
-  //
-  //   // git branch: 'master', url: "${git_url}"
-  //
-  //   def shortCommit = pipelineLibs.getShortCommit()
-  //   def commitChangeset = pipelineLibs.getCommitChangeset()
-  //
-  //   pipelineLibs.setBuildName("v1.0")
-  //
-  // }
-  //
-  // stage('Build') {
-  //   pipelineLibs.sayHello()
-  // }
-  //
-  // stage('OWASP & Sonar') {
-  //   // pipelineLibs.owaspDependencyCheck(pipelineJdk, pipelineMvn)
-  //   // pipelineLibs.sonarAnalysis()
-  // }
-
+   stage 'test'
+   def whatThe = someFunc('textToFunc')
+   def whatThe2 = someFunc2('textToFunc2')
 }
 
-def testFunction(Map config) {
-  config.debug = config.debug ?: false
-
-  // if (!config.containsKey("debug")) {
-  //   config.debug = false
-  // }
-  echo config
+def someFunc(String text){
+    echo text
+    text
+}
+def someFunc2(String text2){
+    echo text2
+    text2
 }
