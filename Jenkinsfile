@@ -3,7 +3,8 @@
 node {
 
   def config = [
-    debug:true
+    debug:true,
+    mvn_command_line: "clean package -DskipTests"
   ]
 
   stage('Init') {
