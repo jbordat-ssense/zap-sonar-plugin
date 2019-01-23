@@ -23,6 +23,11 @@ node {
     qaAnalysis(config)
   }
 
+  stage('Dependency Check') {
+    // Lanch Sonar Qube analysis
+    dependencyCheck(config)
+  }
+
 
   //
   // stage('Repository') {
