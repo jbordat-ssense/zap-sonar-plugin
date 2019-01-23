@@ -2,20 +2,24 @@
 
 node {
 
+  def config = [
+    debug:true
+  ]
+
   stage('Init') {
-
-    // hello()
-    // hello([debug:true])
-    // hello([message:"HAHAHAHAHA"])
-
-
     // Show git informations
     // Set display name
-    initialize()
+    initialize(config)
+  }
+
+  stage('Build') {
+    // Build maven
+    mvn(config)
   }
 
   stage('Security') {
-    qaAnalysis([debug:true])
+    // Lanch Sonar Qube analysis
+    qaAnalysis(config)
   }
 
 
