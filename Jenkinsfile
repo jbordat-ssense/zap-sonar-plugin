@@ -4,7 +4,8 @@ node {
 
   def config = [
     debug:true,
-    mvn_command_line: "clean package -DskipTests"
+    mvn_command_line: "clean package -DskipTests",
+    datadir: "/var/jenkins_home/dependency-check-data"
   ]
 
   stage('Init') {
