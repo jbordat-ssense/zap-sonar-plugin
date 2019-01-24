@@ -5,11 +5,6 @@ node {
   def config = [
     debug:true,
     mvn_command_line: "clean package -DskipTests",
-    datadir: "${JENKINS_HOME}/dependency-check-data",
-    include_csv_reports: true,
-    include_html_reports: true,
-    include_json_reports: true,
-    outdir: "${WORKSPACE}/dependency-check-report"
   ]
 
   stage('Init') {
@@ -23,15 +18,16 @@ node {
     mvn(config)
   }
 
+  stage('Dependency Check') {
+    // Lanch Sonar Qube analysis
+    dependencyCheck(config)
+  }
+
   stage('Security') {
     // Lanch Sonar Qube analysis
     qaAnalysis(config)
   }
 
-  stage('Dependency Check') {
-    // Lanch Sonar Qube analysis
-    dependencyCheck(config)
-  }
 
 
   //
