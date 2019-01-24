@@ -23,7 +23,7 @@ node {
     dependencyCheck(config)
   }
 
-  stage('Security') {
+  stage('QA') {
     // Lanch Sonar Qube analysis
     qaAnalysis(config)
   }
