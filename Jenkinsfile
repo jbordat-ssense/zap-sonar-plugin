@@ -8,7 +8,8 @@ node {
     datadir: "${JENKINS_HOME}/dependency-check-data",
     include_csv_reports: true,
     include_html_reports: true,
-    include_json_reports: true
+    include_json_reports: true,
+    outdir: "${WORKSPACE}/dependency-check-report"
   ]
 
   stage('Init') {
