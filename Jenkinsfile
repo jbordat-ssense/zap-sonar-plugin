@@ -4,15 +4,15 @@ pipeline {
   agent any
   stages {
     def config = [
-    debug:true,
-    mvn_command_line: "clean package -DskipTests",
+      debug:true,
+      mvn_command_line: "clean package -DskipTests",
     ]
 
-    // stage('Init') {
-    //   // Show git informations
-    //   // Set display name
-    //   initialize(config)
-    // }
+    stage('Init') {
+      // Show git informations
+      // Set display name
+      initialize(config)
+    }
     //
     // stage('Build') {
     //   // Build maven
@@ -28,9 +28,6 @@ pipeline {
     //   // Lanch Sonar Qube analysis
     //   qaAnalysis(config)
     // }
-
-
-
 
   }
   post {
