@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'make check'
+                echo "test"
             }
         }
     }
     post {
         always {
-            junit '**/target/*.xml'
+            echo "do something"
         }
         failure {
             echo "Failure"
