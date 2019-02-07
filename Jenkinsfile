@@ -1,3 +1,5 @@
+@Library('jenkinsLib@feat/DEVOPS-1079_auto_apps_security_scans') _
+
 pipeline {
     agent any
     stages {
