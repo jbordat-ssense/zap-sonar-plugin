@@ -3,6 +3,12 @@
 pipeline {
     agent any
     stages {
+
+        def config = [
+          debug: true,
+          mvn_command_line: "clean package -DskpiTests",
+        ]
+
         stage('Test') {
             steps {
                 echo "test"
