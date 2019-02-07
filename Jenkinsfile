@@ -28,10 +28,11 @@ node {
   //   qaAnalysis(config)
   // }
 
-  post {
-    always {
-      slackSend color: 'good', message: 'This is a test message'
-    }
-  }
 
+}
+
+post {
+  always {
+    slackSend color: 'good', message: 'This is a test message'
+  }
 }
