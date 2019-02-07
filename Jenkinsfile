@@ -1,4 +1,4 @@
-@Library('jenkinsLib') _
+@Library('jenkinsLib@feat/DEVOPS-1079_auto_apps_security_scans') _
 
 node {
 
@@ -27,28 +27,5 @@ node {
     // Lanch Sonar Qube analysis
     qaAnalysis(config)
   }
-
-
-
-  //
-  // stage('Repository') {
-  //
-  //   // git branch: 'master', url: "${git_url}"
-  //
-  //   def shortCommit = pipelineLibs.getShortCommit()
-  //   def commitChangeset = pipelineLibs.getCommitChangeset()
-  //
-  //   pipelineLibs.setBuildName("v1.0")
-  //
-  // }
-  //
-  // stage('Build') {
-  //   pipelineLibs.sayHello()
-  // }
-  //
-  // stage('OWASP & Sonar') {
-  //   // pipelineLibs.owaspDependencyCheck(pipelineJdk, pipelineMvn)
-  //   // pipelineLibs.sonarAnalysis()
-  // }
 
 }
