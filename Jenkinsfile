@@ -29,7 +29,7 @@ node {
   // }
 
   stage('End') {
-    gitshortcommit=${env.GIT_COMMIT[0..7]}
+    gitshortcommit = "${env.GIT_COMMIT[0..7]}"
     echo gitshortcommit
   }
 
