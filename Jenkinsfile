@@ -7,25 +7,31 @@ node {
     mvn_command_line: "clean package -DskipTests",
   ]
 
-  stage('Init') {
-    // Show git informations
-    // Set display name
-    initialize(config)
-  }
+  // stage('Init') {
+  //   // Show git informations
+  //   // Set display name
+  //   initialize(config)
+  // }
+  //
+  // stage('Build') {
+  //   // Build maven
+  //   mvn(config)
+  // }
+  //
+  // stage('Dependency Check') {
+  //   // Lanch Sonar Qube analysis
+  //   dependencyCheck(config)
+  // }
+  //
+  // stage('QA') {
+  //   // Lanch Sonar Qube analysis
+  //   qaAnalysis(config)
+  // }
 
-  stage('Build') {
-    // Build maven
-    mvn(config)
-  }
-
-  stage('Dependency Check') {
-    // Lanch Sonar Qube analysis
-    dependencyCheck(config)
-  }
-
-  stage('QA') {
-    // Lanch Sonar Qube analysis
-    qaAnalysis(config)
+  post {
+    always {
+      slackSend color: 'good', message: 'This is a test message'
+    }
   }
 
 }
