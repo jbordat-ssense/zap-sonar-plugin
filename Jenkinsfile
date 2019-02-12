@@ -19,21 +19,21 @@ node {
       // Set display name
       initialize(config)
     }
-    //
-    // stage('Build') {
-    //   // Build maven
-    //   mvn(config)
-    // }
-    //
-    // stage('Dependency Check') {
-    //   // Lanch Sonar Qube analysis
-    //   dependencyCheck(config)
-    // }
-    //
-    // stage('QA') {
-    //   // Lanch Sonar Qube analysis
-    //   qaAnalysis(config)
-    // }
+
+    stage('Build') {
+      // Build maven
+      mvn(config)
+    }
+
+    stage('Dependency Check') {
+      // Lanch Sonar Qube analysis
+      dependencyCheck(config)
+    }
+
+    stage('QA') {
+      // Lanch Sonar Qube analysis
+      qaAnalysis(config)
+    }
 
     // stage('End') {
     //   gitshortcommit = "${env.GIT_COMMIT[0..7]}"
