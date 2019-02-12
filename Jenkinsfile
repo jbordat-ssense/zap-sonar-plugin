@@ -5,8 +5,8 @@ node {
   def config = [
     debug:true,
     mvn_command_line: "clean package -DskipTests",
-    project_name: "MS-Sample",
-    project_key: "ms-sample",
+    project_name: "MS-Demo-Test-Sample-Try",
+    project_key: "ms-demo-test-sample-try",
   ]
 
   try {
