@@ -10,10 +10,14 @@ node {
   ]
 
   try {
+
+    config.step = 1
+    slack(config)
+
     stage('Init') {
-    // Show git informations
-    // Set display name
-    initialize(config)
+      // Show git informations
+      // Set display name
+      initialize(config)
     }
     //
     // stage('Build') {
@@ -35,7 +39,6 @@ node {
     //   gitshortcommit = "${env.GIT_COMMIT[0..7]}"
     //   echo env
     // }
-
 
     currentBuild.result = "SUCCESS"
     config.step = 3
