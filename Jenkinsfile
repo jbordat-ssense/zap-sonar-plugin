@@ -5,7 +5,7 @@ def config = [
   mvn_command_line: "clean package -DskipTests",
   project_name: "MS-Demo-Test-Sample-Try",
   project_key: "ms-demo-test-sample-try",
-  slack_message_version: '1'
+  slack_message_version: 1
 ]
 
 defaultPipeline(config) { context ->
