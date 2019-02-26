@@ -26,4 +26,5 @@ defaultPipeline(config) { context ->
     // Lanch Sonar Qube analysis
     qaAnalysis(config)
   }
+  
 }
