@@ -1,4 +1,4 @@
-@Library('jenkinsLib@feat/DEVOPS-1079_auto_apps_security_scans') _
+@Library('jenkinsLib') _
 
 def config = [
   debug:true,
