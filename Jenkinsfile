@@ -1,4 +1,4 @@
-@Library('jenkinsLib') _
+@Library('jenkinsLib@feat/NONE-none') _
 
 node {
 
@@ -55,5 +55,5 @@ node {
     println(ex.getMessage());
     println(ex.getStackTrace());
   }
-  
+
 }
